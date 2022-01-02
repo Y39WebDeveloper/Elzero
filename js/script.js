@@ -39,7 +39,7 @@ function startCount(el){
 
 
 
-let countDownDate = new Date("Feb 09, 2020 10:15:00").getTime();
+let countDownDate = new Date("Feb 09, 2022 10:15:00").getTime();
 let counter = setInterval(() => {
     let dateNow = new Date().getTime();
     let datsDiff = countDownDate - dateNow;
