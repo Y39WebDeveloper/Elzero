@@ -3,7 +3,6 @@ let spans = document.querySelectorAll(".progress span");
 
 window.onscroll = function () {
     if (window.scrollY >= section1.offsetTop - 100) {
-        console.log("gdfsdgfd");
         spans.forEach((span) => {
             span.style.width = span.dataset.width;
         });
@@ -39,7 +38,7 @@ function startCount(el){
 
 
 
-let countDownDate = new Date("Dec 31, 2021 23:59:59").getTime();
+let countDownDate = new Date("Feb 09, 2022 10:15:00").getTime();
 let counter = setInterval(() => {
     let dateNow = new Date().getTime();
     let datsDiff = countDownDate - dateNow;
@@ -50,7 +49,7 @@ let counter = setInterval(() => {
     let seconds = Math.floor((datsDiff % (1000 * 60))/1000);
 
     document.querySelector(".days").innerHTML = days;
-    document.querySelector(".hours").innerHTML = 10 ? `0${hours}` : hours;
+    document.querySelector(".hours").innerHTML = hours < 10 ? `0${hours}` : hours;
     document.querySelector(".minutes").innerHTML = minutes < 10 ? `0${minutes}`: minutes;
     document.querySelector(".seconds").innerHTML = seconds < 10 ? `0${seconds}`: seconds;
 
