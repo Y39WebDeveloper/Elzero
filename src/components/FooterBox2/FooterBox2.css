@@ -1,0 +1,28 @@
+.box2 .links li {
+    padding: 15px 0;
+    transition: var(--main-transition-duration);
+    display: flex;
+    align-items: center
+}
+
+.box2 .links li:not(:last-child) {
+    border-bottom: 1px solid #343434;
+}
+
+.box2 .links li:hover {
+    padding-left: 10px;
+}
+
+.box2 .links li:hover a {
+    color: #fff;
+}
+
+.box2 .links li a {
+    color: #b9b9b9;
+    transition: var(--main-transition-duration);
+}
+
+.box2 .links li svg {
+    margin-right: 10px;
+    color: var(--main-color);
+}

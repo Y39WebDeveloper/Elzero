@@ -1,0 +1,31 @@
+.box3 .line {
+    display: flex;
+    align-items: center;
+    color: #b9b9b9;
+    margin-bottom: 30px;
+}
+
+.box3 .line svg {
+    font-size: 25px;
+    color: var(--main-color);
+    margin: 10px;
+}
+
+.box3 .line .info {
+    line-height: 1.7;
+    flex: 1;
+}
+
+.box3 .line .info span {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .box3 .line {
+        flex-direction: column;
+    }
+
+    .box3 .line svg {
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,17 @@
+.work-steps .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.work-steps .container .image {
+    max-width: 100%;
+    margin-right: 100px;
+}
+@media (max-width: 991px) {
+    .work-steps .container {
+        flex-direction: column;
+    }
+    .work-steps .container .image{
+        margin: 0 0 50px;
+    }
+}

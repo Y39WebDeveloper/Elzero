@@ -1,0 +1,14 @@
+.skills .container {
+    display: flex;
+    align-items: center;
+}
+
+.skills {
+    flex: 1;
+}
+
+@media (max-width:991px) {
+    .skills .container img {
+        display: none;
+    }
+}

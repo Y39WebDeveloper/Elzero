@@ -1,0 +1,29 @@
+.skill h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill h3 span {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: var(--main-color);
+}
+
+.skill .progress {
+    height: 30px;
+    background-color: #eee;
+    position: relative;
+}
+
+.skill .progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* width: 0%; */
+    background-color: var(--main-color);
+    transition: .5s;
+} 

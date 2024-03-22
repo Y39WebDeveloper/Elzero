@@ -1,0 +1,9 @@
+.main-nav {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .main-nav {
+        margin: auto;
+    }
+}

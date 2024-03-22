@@ -1,0 +1,47 @@
+.box1 h3 {
+    color: #fff;
+    font-size: 50px;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+.box1 .social {
+    display: flex;
+}
+.box1 .social li {
+    margin-right: 10px;
+}
+
+.box1 .social li a {
+    background-color: #313131;
+    color: #b9b9b9;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: var(--main-transition-duration);
+}
+
+.box1 .social .facebook:hover {
+    background-color: #1877f2;
+}
+
+.box1 .social .twitter:hover {
+    background-color: #1da1f2;
+}
+
+.box1 .social .youtube:hover {
+    background-color: #ff0000;
+}
+
+.box1 .text {
+    line-height: 2;
+    color: #b9b9b9;
+}
+
+@media (max-width: 768px) {
+    .box1 .social {
+        justify-content: center;
+    }
+}

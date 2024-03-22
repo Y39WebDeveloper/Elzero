@@ -1,0 +1,35 @@
+.navigation-item > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    position: relative;
+    color: #000;
+    padding: 0 30px;
+    transition: var(--main-transition-duration);
+    overflow: hidden;
+}
+.navigation-item > a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
+    transition: var(--main-transition-duration);
+}
+.navigation-item>a:hover{
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+.navigation-item>a:hover::before{
+    left: 0;
+}
+@media (max-width: 767px) {
+    .navigation-item >a {
+        padding: 10px;
+        font-size: 14px;
+        height: 40px;
+    }
+}

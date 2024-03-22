@@ -1,0 +1,114 @@
+.header {
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+}
+.header .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.header .text {
+    flex: 1;
+}
+
+.header .text h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.header .text p {
+    font-size: 23px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+
+.header .img img {
+    position: relative;
+    width: 600px;
+    animation: up-and-down 5s linear infinite;
+}
+
+.header .go-down {
+    color: var(--main-color);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition-duration);
+}
+
+.header .go-down:hover {
+    color: var(--main-color-alt);
+}
+
+.header .go-down svg {
+    font-size: 2em;
+    animation: bouncing 1.5s infinite;
+}
+
+@media (max-width: 991px) {
+    .header .text {
+        text-align: center;
+    }
+    .header .text p{
+        margin: 10px auto;
+    }
+    .header .img{
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header .text h1 {
+        font-size: 28px;
+    }
+    .header .text p{
+        font-size: 18px;
+    }
+}
+
+@keyframes up-and-down {
+
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px;
+    }
+}
+
+@keyframes bouncing {
+
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40%,
+    60% {
+        transform: translateY(-15px);
+    }
+}

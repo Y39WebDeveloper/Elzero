@@ -1,0 +1,125 @@
+.pricing-box {
+    position: relative;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+    transition: var(--main-transition-duration);
+    background-color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+.pricing-box::before,
+.pricing-box::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 50%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: var(--main-transition-duration);
+}
+
+.pricing-box::before {
+    left: 0;
+    top: 0;
+}
+
+.pricing-box::after {
+    right: 0;
+    bottom: 0;
+}
+
+.pricing-box:hover::before,
+.pricing-box:hover::after {
+    width: 100%;
+}
+.pricing-box .title {
+    font-weight: bold;
+    margin: 30px 0;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+
+.pricing-box img {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.pricing-box .price {
+    margin-bottom: 20px;
+}
+
+.pricing-box .amount {
+    display: block;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--main-color);
+}
+
+.pricing-box .time {
+    color: #777;
+}
+
+.pricing-box ul {
+    text-align: left;
+}
+
+.pricing-box ul li {
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-box ul li svg {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f00c";
+    margin-right: 10px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.pricing-box a {
+    display: block;
+    width: fit-content;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    margin: 30px auto 40px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: var(--main-transition-duration);
+}
+
+.pricing-box a:hover {
+    background-color: var(--main-color-alt);
+    border-color: var(--main-color-alt);
+    color: #fff;
+}
+
+.pricing-box.popular .label {
+    position: absolute;
+    writing-mode: vertical-rl;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 10px 20px 10px;
+    font-size: 18px;
+    right: 20px;
+    width: 40px;
+}
+
+.pricing-box.popular .label::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-style: solid;
+    border-color: transparent var(--main-color);
+    border-width: 20px;
+}
+@media (min-width: 1200px) {
+    .pricing-box.popular {
+        top: -20px;
+    }
+}
